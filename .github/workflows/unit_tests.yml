@@ -1,18 +1,14 @@
-name: Unit Tests
-
+name: Run Unit Tests
 on:
-  push:
-    branches:
-      - main
-
+  workflow_run:
+    workflows: ["NPM Build and Test"]
+    types:
+      - completed
 jobs:
-  unit_tests:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm install
-
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Run Jest Tests
         run: npm test
