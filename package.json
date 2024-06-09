@@ -1,19 +1,17 @@
 {
-  "name": "bcdv4033-lab1",
+  "name": "simple-calculator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple calculator implementation in Node.js",
+  "main": "calculator.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jdjatin/BCDV4033-Lab1.git"
+  "devDependencies": {
+    "jest": "^27.0.6"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jdjatin/BCDV4033-Lab1/issues"
+  "jest": {
+    "testEnvironment": "node"
   },
-  "homepage": "https://github.com/jdjatin/BCDV4033-Lab1#readme"
+  "author": "Your Name",
+  "license": "ISC"
 }

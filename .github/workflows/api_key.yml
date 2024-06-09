@@ -1,0 +1,17 @@
+name: Secret API Key
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  secret_api_key:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set API Key as Environment Variable
+        run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
