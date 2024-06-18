@@ -5,7 +5,7 @@
   "main": "calculator.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node calculator.js"
   },
   "devDependencies": {
     "husky": "^9.0.11",
